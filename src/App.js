@@ -27,14 +27,14 @@ const products = [
 
 export default function LandingPageFeteMeres() {
   return (
-    <div className="p-6 grid gap-6">
+    <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-4xl font-bold text-center mb-8">🎁 Spécial Fête des Mères 🎁</h1>
       <p className="text-center text-lg mb-10">Offrez un cadeau inoubliable livré directement d'Europe 🇫🇷 à Abidjan 🇨🇮</p>
 
       <div className="grid md:grid-cols-3 gap-6">
         {products.map((product) => (
-          <Card key={product.id} className="rounded-2xl shadow-md">
-            <CardContent className="p-4">
+          <Card key={product.id}>
+            <CardContent>
               <img src={product.image} alt={product.title} className="w-full h-48 object-cover rounded-xl mb-4" />
               <h3 className="text-xl font-semibold mb-2">{product.title}</h3>
               <p className="text-gray-600 mb-2">{product.description}</p>
@@ -44,7 +44,7 @@ export default function LandingPageFeteMeres() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button className="w-full">Commander via WhatsApp</Button>
+                <Button>Commander via WhatsApp</Button>
               </a>
             </CardContent>
           </Card>
